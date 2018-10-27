@@ -3,8 +3,26 @@ title: Specify How Fonts Should Degrade
 ---
 ## Specify How Fonts Should Degrade
 
-This is a stub. <a href='https://github.com/freecodecamp/guides/tree/master/src/pages/certifications/responsive-web-design/basic-css/specify-how-fonts-should-degrade/index.md' target='_blank' rel='nofollow'>Help our community expand it</a>.
+The fisrt challenge is to apply the apply the `monospace` font to the `h2` element:
+to do so the line number 8 in the h2 element:
 
-<a href='https://github.com/freecodecamp/guides/blob/master/README.md' target='_blank' rel='nofollow'>This quick style guide will help ensure your pull request gets accepted</a>.
+```css
+  h2 {
+    font-family: Lobster;
+  }
+```
+becomes:
+```css
+  h2 {
+    font-family: Lobster, monospace;
+  }
+```
+In this way the font `Lobster` will be the first choice, but if it is not avaiable the `monospace` will replace it.
 
-<!-- The article goes here, in GitHub-flavored Markdown. Feel free to add YouTube videos, images, and CodePen/JSBin embeds  -->
+Then we have to comment out the first line (the `Link` tag ) which import of the `Lobster`, using `<!--` `-->` so it becomes:
+
+```html
+<!--  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
+```
+
+In this was since `Lobster` is not longer imported the `monospace` will replace it. 
